@@ -1,0 +1,54 @@
+<div class="container" style="display: flex; height: 100px; flex-direction: column">
+    <div style="text-align: center; padding-left: 80%; padding-top: 5%;">
+      <button mat-raised-button (click)="navigateToRecords()" color="accent">Record List</button>
+    </div>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <div style="width: 100%;">
+        <h3 style="text-align: center;">Sample Form</h3>
+        <form [formGroup]="profileForm" class="form-container" style="text-align: center;" >
+          <mat-card>
+            <mat-card-content style="text-align: center;">
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="full-width">
+                    <input formControlName="first_name" matInput placeholder="First name">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field class="full-width">
+                    <input  formControlName="last_name" matInput placeholder="Last name">
+                  </mat-form-field>
+                </div>
+              </div>
+  
+            </mat-card-content>
+            <mat-card-actions>
+              <button [disabled]="!profileForm.valid" (click)="onSubmit()" mat-raised-button color="primary">Save</button>
+            </mat-card-actions>
+          </mat-card>
+      </form>
+    </div>
+    <!-- <div>
+      <button (click)="getRecordData(19)">Get Records</button>
+    </div> -->
+    <!-- <div *ngIf="!showForm" style="text-align: center; column-gap: 40px;">
+      <h3>Record Data</h3>
+    
+      <table >
+        <thead>
+            <tr>
+              <th>ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let record of records">
+            <td>{{ record.id }}</td>
+            <td>{{ record.first_name }}</td>
+            <td>{{ record.last_name }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div> -->
+  </div>

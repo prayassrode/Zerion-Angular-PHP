@@ -1,0 +1,24 @@
+<div style="text-align: center; padding-left: 80%; padding-top: 5%;">
+    <button mat-raised-button (click)="navigateToRecords()" color="accent">Record Form</button>
+</div>
+
+<div style="text-align: center; column-gap: 40px; align-self: center;">
+    <h3>Record Data</h3>
+  
+    <table style="text-align: center; column-gap: 40px; align-self: center;">
+      <thead>
+          <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of records">
+          <td>{{ record.id }}</td>
+          <td>{{ record.first_name }}</td>
+          <td>{{ record.last_name }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

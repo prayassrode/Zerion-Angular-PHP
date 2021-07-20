@@ -1,0 +1,29 @@
+
+{
+    "/getToken": {
+      "target": "http://localhost/zerionAngular/zerion.php",
+      "secure": false,
+      "changeOrigin": false,
+      "pathRewrite": {
+        "^/getToken": ""
+      }
+    },
+
+    "/postFormData": {
+      "target": "http://localhost/zerionAngular/postFormData.php",
+      "secure": false,
+      "changeOrigin": false,
+      "pathRewrite": {
+        "^/postFormData": ""
+      }
+    },
+
+    "/getRecord/*": {
+      "target": "http://localhost/zerionAngular/getRecord.php",
+      "secure": false,
+      "changeOrigin": false,
+      "pathRewrite": {
+        "^/getRecord": ""
+      }
+    }
+}
