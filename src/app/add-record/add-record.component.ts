@@ -72,30 +72,4 @@ ngOnInit(): void {
   this.router.navigate(['records']);
  }
 
-//  getRecordData() {
-//   let params = new HttpParams();
-//   let headers = new HttpHeaders().set('Access-Control-Allow-Origin', 'http://localhost:4200');
-
-//   this.http.get('http://localhost:4200/getToken', {params, headers}).subscribe((data:any) => {
-//     this.token = data.accessToken;
-//     this.http.get('http://localhost:4200/getRecord?token='+this.token+"&fields=first_name,last_name" , {params, headers}).subscribe((recordData:any) => {
-//       this.records = recordData;
-//     },
-//     err => {
-//       window.alert("Something went wrong. Please try again.");
-//     }
-//     );
-//   });
-//  }
-
-//  formRecordToggle() {
-//     this.showForm = !this.showForm;
-//     if(this.showForm) {
-//       this.buttonName = "Show Records";
-//     }else{
-//       this.buttonName = "Show Form";
-//       this.getRecordData();
-//     }
-//  }
-
 }
